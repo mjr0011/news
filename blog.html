@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard News - Nigeria News</title>
+    <style>
+        :root {
+            --primary: #ff0000;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --background: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .header-top {
+            padding: 0.5rem;
+            background: var(--background);
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search-input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .search-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .nav-container {
+            background: var(--background);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow-x: auto;
+        }
+
+        .nav-item {
+            padding: 1rem;
+            white-space: nowrap;
+        }
+
+        .nav-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-item a:hover {
+            color: var(--primary);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .news-item {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .news-item h2 {
+            margin: 1rem 0;
+            font-size: 1.5rem;
+        }
+
+        .news-item p {
+            color: var(--text-secondary);
+        }
+
+        .latest-news {
+            background: #f8f8f8;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .latest-news h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .latest-news-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .latest-news-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .news-meta {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="date">Thursday, 20th February 2025</div>
+            <div class="search-container">
+                <input type="search" class="search-input" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+        <div class="logo-container">
+            <img src="vngpic.png" alt="Vanguard News Logo" class="logo">
+        </div>
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="https://www.vanguardngr.com/?">HOME</a></li>
+                <li class="nav-item"><a href="https://www.vanguardngr.com/category/top-stories/#google_vignette">NEWS</a></li>
+                <li class="nav-item"><a href="https://digitalpaper.vanguardngr.com/">E-EDITIONS</a></li>
+                <li class="nav-item"><a href="https://www.vanguardngr.com/category/politics/">POLITICS</a></li>
+                <li class="nav-item"><a href="https://www.vanguardngr.com/category/more/metro/">METRO</a></li>
+                <li class="nav-item"><a href="https://www.vanguardngr.com/category/business/">BUSINESS</a></li>
+                <li class="nav-item"><a href="https://www.vanguardngr.com/category/sports/">SPORTS</a></li>
+                <li class="nav-item"><a href="https://www.vanguardngr.com/category/editorial/">EDITORIAL</a></li>
+                <li class="nav-item"><a href="https://www.vanguardngr.com/category/columns/">COLUMNS</a></li>
+                <li class="nav-item"><a href="https://allure.vanguardngr.com/">ALLURE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="news-grid">
+            <article class="news-item">
+                <img src="ikd2.jpg" alt="Senate Chamber">
+                <h2>CULT INITIATION AND SUBSEQUENT ESCAPE</h2>
+                <p>With the
+                    menace
+                    of the
+                    notorious cult group rampaging the Ikorodu community has been
+                    - has gotten the attention of the civil authority that is the Police.
+                    Many
+                    people
+                    have been
+                    forcefully been handpicked and initiated to the deadly cult group and if you refuse to join them you will be killed by the deadly cult gang. Our reported move around the street of ikorodu, Lagos to file a report on the menace of the cult group which led to an eye witness report held on April 5, 2024. The eye witness gave a detailed account of an incident he witnessed involving the initiation of a young man into a notorious cult group.
+                    The events that
+                    unfolded were nothing short of horrific, and I feel compelled to share my testimony to raise awareness about the dangers of cultism.
+                    On the evening of April 5, 2024, I was in the vicinity of a remote area in Lagos when I stumbled upon individuals
+                    group of gathered around a
+                    makeshift shrine.
+                    The
+                    atmosphere was tense, and I could sense an air of foreboding.
+                    As
+                    observed
+                    from
+                    safe
+                    distance,
+                    a young man,
+                    later
+                    identified
+                    as
+                    OLOWOLAGBA
+                    YUSUF LEKAN, was led to the center of the gathering by the gang of the cult group.The cult members, clad in white robes, began to chant and perform rituals, which appeared to be some sort of initiation ceremony.
+                    OLOWOLAGBA
+                    YUSUF
+                    LEKAN
+                    seemed hesitant and
+                    visibly
+                    shaken,
+                    but the cult
+                    members coerced him into participating.
+                    As the ritual
+                    progressed.
+                    I witnessed
+                    OLOWOLAGBA
+                    LEKAN
+                    YUSUF
+                    being subjected to physical and emotional abuse, including beatings and verbal harassment. Suddenly
+                    OLOWOLAGBA
+                    YUSUF
+                    LEKAN broke free from the cult members and made a desperate dash for freedom.
+                    The cult
+                    members
+                    gave
+                    chase, but
+                    OLOWOLAGBA
+                    YUSUF
+                    LEKAN managed to evade them and escape
+                    into the nearby
+                    woods.
+                    As an eyewitness to this horrific incident, he is determine speak out against the dangers of cultism. The tactics employed by these groups are nothing short of terrorism, and it is imperative that we take collective action to prevent further harm. I urge the authorities to take immediate action to dismantle this cult group and bring its members to justice. I also call on
+                    the international
+                    community
+                    to provide
+                    support
+                    and protection to victims of cultism,
+                    like
+                    OLOWOLAGBA
+                    YUSUF LEKAN who have been forced to flee their homes in search of safety.</p>
+            </article>
+            <article class="news-item">
+                <img src="ikd1.jpg" alt="News Image">
+                <h2>Violent Cult Group Wreaks Havoc In Ikorodu</h2>
+                <p>On 17 May, 2024, a disturbing incident occurred in Ikorodu, Lagos involving a notorious cult group and a potential victim who narrowly escaped initiation. The events that unfolded are a testament to the brutality and desperation of these groups.
+                    According to eyewitnesses, the cult group, known for its ruthless tactics, had been searching for a new recruit to initiate into their ranks. They nad set their sights on a young individual, OLOWOLAGBA YUSUF LEKAN who had unknowingly caught their attention.
+                    On the day of the incident, the cult members ambushed OLOWOLAGBA YUSUF LEKAN and attempted to force him into their vehicle.
+                    However, the victim managed to break free and escape into a nearby crowd, leaving the cult members empty-handed.
+                <br>
+                Enraged by their failed attempt, the cult members vowed to track down OLOWOLAGBA YUSUF LEKAN and exact revenge. They subsequently descended upon the victim's residence, intent on maiming or killing him.
+                Fortunately, OLOWOLAGBA YUSUF LEKAN had already fled the premises, anticipating the cult's retaliation.
+                Undeterred, the cult members proceeded to vandalize and destroy OLOWOLAGBA YUSUF LEKAN'S
+                home, leaving a trail of destruction in their wake. The police were notified, and an investigation is currently underway to apprehend the perpetrators.
+                This incident serves as a stark reminder of the dangers posed by cult groups and the importance of vigilance and community awareness. It is crucial that we support and protect vulnerable individuals from these predatory groups and work towards creating a safer, more just society.</p>
+            </article>
+        </div>
